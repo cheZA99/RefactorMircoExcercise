@@ -1,16 +1,15 @@
 using System;
-
 namespace TDDMicroExercises.TirePressureMonitoringSystem
 {
-    public class Sensor
+    public class Sensor : ISensor
     {
         //
         // The reading of the pressure value from the sensor is simulated in this implementation.
         // Because the focus of the exercise is on the other class.
         //
 
-        const double Offset = 16;
-        readonly Random _randomPressureSampleSimulator = new Random();
+        private const double Offset = 16;
+        private readonly Random _randomPressureSampleSimulator = new Random();
 
         public double PopNextPressurePsiValue()
         {
